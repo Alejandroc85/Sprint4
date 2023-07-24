@@ -43,7 +43,7 @@ SET completado = TRUE
 WHERE id= 2;
 
 
---Ultima consigna
+--Ultima consigna.
 UPDATE Tarea
 SET completado = CASE WHEN completado = TRUE THEN FALSE ELSE TRUE END 
 WHERE id=(SELECT MAX (id) FROM Tarea);
